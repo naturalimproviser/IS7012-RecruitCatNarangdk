@@ -1,0 +1,74 @@
+﻿@page
+@model RecruitCatNarangdk.Pages.Industries.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center p-3 alert alert-secondary">All Industries</h1>
+
+<p class="text-right font-weight-bold font-italic p-2">
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Industry[0].IndustryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Industry[0].IndustryLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Industry[0].ContactNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Industry[0].EmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Industry[0].IndustryFoundedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Industry[0].IsPrivate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Industry)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndustryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndustryLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContactNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndustryFoundedDate)
+                </td>
+                <td>
+                    @if (item.IsPrivate)
+                    {
+                        <span class="badge badge-pill badge-info">Yes</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-pill badge-success">No</span>
+                    }
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.IndustryId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.IndustryId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.IndustryId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

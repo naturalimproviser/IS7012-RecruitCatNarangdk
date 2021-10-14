@@ -1,0 +1,96 @@
+﻿@page
+@model RecruitCatNarangdk.Pages.Candidates.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center p-3 alert alert-secondary">All Candidates</h1>
+
+<p class="text-right font-weight-bold font-italic p-2">
+    <a asp-page="Create">Create new</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].SocialSecurityNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].TargetSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].PerformanceRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].Industry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Candidate[0].JobTitle)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Candidate) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SocialSecurityNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TargetSalary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerformanceRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Industry.IndustryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company.CompanyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobTitle.JobDescription)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.CandidateId">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.CandidateId">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.CandidateId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

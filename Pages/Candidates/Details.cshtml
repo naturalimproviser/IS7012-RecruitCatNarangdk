@@ -1,0 +1,87 @@
+﻿@page
+@model RecruitCatNarangdk.Pages.Candidates.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<h1 class="text-center alert alert-success">Candidate: @Model.Candidate.FirstName @Model.Candidate.LastName</h1>
+
+<div class="container">
+    <div>
+        <a asp-page="./Edit" asp-route-id="@Model.Candidate.CandidateId">Edit</a> |
+        <a asp-page="./Index">Back to List</a>
+    </div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.FullName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.FullName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.EmailAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.EmailAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.DateOfBirth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.DateOfBirth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.SocialSecurityNumber)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.SocialSecurityNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.StartDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.StartDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.TargetSalary)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.TargetSalary)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.PerformanceRating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.PerformanceRating)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.Industry)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.Industry.IndustryName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.Company)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.Company.CompanyName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Candidate.JobTitle)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Candidate.JobTitle.JobDescription)
+        </dd>
+    </dl>
+</div>
+
+

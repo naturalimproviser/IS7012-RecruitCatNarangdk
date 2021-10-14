@@ -1,0 +1,148 @@
+﻿
+/* JUMBOTRON STYLE HERE */
+.jumbotron {
+    background:url(https://source.unsplash.com/1600x1050/?computer+screen);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: white;
+    height: 100vh;
+    width:auto;
+ 
+}
+
+/* BUTTON STYLE HERE */
+.btn {
+    margin-right: 10px;
+}
+
+.btn-outline-primary {
+    border-color: white;
+    color: white;
+    background-color: transparent;
+    margin-top: 10px;
+    font-weight: 100;
+}
+
+    .btn-outline-primary:hover {
+        border-color: transparent;
+        color: deepskyblue;
+        background-color: white;
+    }
+
+    .btn-outline-primary:active {
+        border-color: transparent;
+        color: deepskyblue;
+        background-color: white;
+        padding: 9px 20px 9px 20px;
+    }
+
+/* BUTTON HEADER RIGHT */
+.rightHeader {
+    position: absolute;
+    top: -15px;
+    right: 10px;
+}
+/* BUTTON HEADER LEFT */
+.leftHeader {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+}
+
+.title {
+    margin-top: 10vh;
+}
+
+.text_margin {
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.string-1 {
+    padding-top: 30px;
+    width: 600px;
+    margin: 0 auto;
+    font-weight: 100;
+    margin-top: -35px;
+}
+
+br {
+    margin: 20px;
+}
+
+div.flare {
+    height: 50px;
+    border-style: solid;
+    border-color: rgb(36, 46, 139);
+    border-width: 2px 0 0 0;
+    border-radius: 45px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-justify {
+    text-align: justify;
+}
+
+.width50 {
+    width: 50px;
+}
+
+.width117 {
+    width: 117px;
+}
+
+.width143 {
+    width: 143px;
+}
+
+.width202 {
+    width: 202px;
+}
+
+.width321 {
+    width: 148px;
+}
+
+.height35 {
+    height: 35px;
+}
+
+a.color {
+    color: red;
+}
+
+.font {
+    font-size: 16px;
+    color: sienna;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.padding-left10 {
+    padding-left: 10px !important;
+}
+
+.bgcolor-yel {
+    background-color: rgb(245, 247, 160);
+}
+
+.bgcolor-black {
+    background-color: black;
+}
+
+.header {
+    color: rgb(255, 255, 255);
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.images-test {
+    width: 100%;
+    height: 40%
+}

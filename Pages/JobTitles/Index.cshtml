@@ -1,0 +1,62 @@
+﻿@page
+@model RecruitCatNarangdk.Pages.JobTitles.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-center p-3 alert alert-secondary">All JobTitles</h1>
+
+<p class="text-right font-weight-bold font-italic p-2">
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.JobTitle[0].JobDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobTitle[0].MinSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobTitle[0].MaxSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobTitle[0].IsFullTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.JobTitle)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MinSalary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaxSalary)
+                </td>
+                <td>
+                    @if (item.IsFullTime)
+                    {
+                        <span class="badge badge-pill badge-dark">Full Time</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-pill badge-light">Part Time</span>
+                    }
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.JobTitleId">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.JobTitleId">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.JobTitleId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
